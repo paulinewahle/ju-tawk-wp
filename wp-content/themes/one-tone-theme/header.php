@@ -10,6 +10,7 @@
 
 <body <?php body_class(); ?>>
     <header>
+        <div> This is the header </div>
         <nav>
             <?php
             wp_nav_menu(array(

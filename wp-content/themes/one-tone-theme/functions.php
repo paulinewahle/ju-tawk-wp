@@ -1,15 +1,16 @@
 <?php
 
-functions one_tone_theme_setup(){
+function one_tone_theme_setup()
+{
 
     //Add support for post thumbnails
-    add_theme_support('post_thumbnails');
+    add_theme_support('post-thumbnails');
 
     //Register navigation menus
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'one-tone-theme'),
         'secondary' => __('Secondary Menu', 'one-tone-theme'),
-    ))
+    ));
 
     //Add custom image sizes
     add_image_size('featured_image', 640, 360, true);
@@ -17,14 +18,15 @@ functions one_tone_theme_setup(){
 
 add_action('after_setup_theme', 'one_tone_theme_setup');
 
-function one_tone_theme_scripts(){
+function one_tone_theme_scripts()
+{
     
-    $theme_version = wp_get_theme()->get("Version")
+    //$theme_version = wp_get_theme()->get("Version")
     //Enqueue styles
-    wp_enqueue_style('one-tone-theme-style', get_stylesheet_uri(), [], $theme_version);
+    wp_enqueue_style('one-tone-theme-style', get_stylesheet_uri());
 
     //Enqueue scripts
-    wp_enqueue_script('one-tone-theme-script', get_template_directory_uri() . '/js/main.js', [], $theme_version, true);
+    wp_enqueue_script('one-tone-theme-script', get_template_directory_uri() . '/js/main.js', [], '1.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'one_tone_theme_scripts');
@@ -36,7 +38,8 @@ function one_tone_theme_meta_function(){
     echo '| <span class="meta-tags">' . __('Tagged:', 'one-tone-theme') . ' ' . get_the_tag_list('', ', ') . '</span>';
 }
 
-function one_tone_theme_footer_function(){
+function one_tone_theme_footer_function()
+{
     $comments_count = get_comments_number();
     if ($comments_count == 1){
         $comments_text = __('1 Comment', 'one-tone-theme');
@@ -46,5 +49,5 @@ function one_tone_theme_footer_function(){
     echo '<div class="footer-meta">';
     echo '<span class="meta-comments"' . $comments_text . '</span>';
     echo '<span class="meta-edit"' . get_edit_post_link(__('Edit', 'one-tone-theme')) . '</span>';
-    echo '</div>'
+    echo '</div>';
 }
