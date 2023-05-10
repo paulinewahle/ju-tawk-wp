@@ -10,11 +10,20 @@
 
 <body <?php body_class(); ?>>
     <header>
-        <div> This is the header </div>
+        
         <nav>
             <?php
             wp_nav_menu(array(
-                'theme_location' => 'primary',
+                //'theme_location' => 'primary',
+                'menu_class' => 'primary-menu',
+            ));
+            ?> 
+        </nav>
+        <h1> One Tone </h1>
+        <nav>
+            <?php
+            wp_nav_menu(array(
+                //'theme_location' => 'primary',
                 'menu_class' => 'primary-menu',
             ));
             ?> 

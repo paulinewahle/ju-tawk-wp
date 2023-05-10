@@ -4,8 +4,75 @@ Author: Pauline Wahle
 Description: A custom Wordpress Theme.
 Version: 1.0
 License: MIT License
-Text Domain: one-tone
 */
-*, body{
-    background-color: blue;
+
+
+@import url("https://use.typekit.net/bws6tsp.css");
+$title-font: "norman-variable", sans-serif;
+$body-font: "adobe-caslon-pro", serif;
+$accent-color: #535cc6;
+$bg-color: #aaacc4;
+html{
+    width: 80vw;
+    margin: 10vw;
+    padding: 0;
+    border: 2px solid;
+}
+h1{
+    font-family: $title-font;
+    font-size: 10em;
+    color: $accent-color;
+}
+p{
+    font-family: $body-font;
+    width: 50%;
+}
+body{
+    background-color: $bg-color;
+    box-sizing: border-box;
+}
+
+header{
+    height: 10vh;
+    width: 80vw;
+    top: 5vh;
+    border: 1px solid;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    h1{
+        font-size: 2em;
+    }
+    nav{
+        //width: 40%;
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        a{
+            text-decoration: none;
+            margin: 0 2em;
+            color: $accent-color;
+            -webkit-text-stroke: 0px;
+        }
+    }
+}
+.wp-block-gallery{
+
+}
+cite{
+    font-family: $title-font;
+    font-size: 2em;
+    color: $accent-color;
+}
+img{
+    width: 30vw;
+}
+a{
+    -webkit-text-stroke: 1px $accent-color;
+    color: rgba(0,0,0,0);
 }

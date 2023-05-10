@@ -31,12 +31,27 @@ function one_tone_theme_scripts()
 
 add_action('wp_enqueue_scripts', 'one_tone_theme_scripts');
 
+function one_tone_theme_widgets_init(){
+    register_sidebar(array(
+        'name' => __('Primary Sidebar', 'one-tone-theme'),
+        'id' => 'primary-sidebar',
+        'description' => __('Add widgets here to appear in the primary sidebar.', 'one-tone-theme'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before-title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+}
+
+add_action('widget_init', 'one_tone_theme_widgets_init');
+
 function one_tone_theme_meta_function(){
     echo '<span class="meta-data">' . get_the_date() . '</span>';
     echo '| <span class="meta-author">' . __('By', 'one-tone-theme') . ' ' . get_the_author() . '</span>';
     echo '| <span class="meta-categories">' . __('Filed under', 'one-tone-theme') . ' ' . get_the_category_list(', ') . '</span>';
     echo '| <span class="meta-tags">' . __('Tagged:', 'one-tone-theme') . ' ' . get_the_tag_list('', ', ') . '</span>';
 }
+
 
 function one_tone_theme_footer_function()
 {
