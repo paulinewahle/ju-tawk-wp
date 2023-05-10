@@ -1,7 +1,8 @@
-<?php get:header(); ?>
+<?php get_header(); ?>
 
+<main id="main" class="site-main">
 <?php
-//? Sart the loop
+// Sart the loop
 while (have_posts()) : the_post();
     //Get rhe template art for displaying content 
     get_template_part('template-parts/content', get_post_type());
@@ -15,6 +16,6 @@ the_posts_pagination(array(
 ));
 ?>
 
-</main> <!-- #main -->$_COOKIE
+</main> <!-- #main -->
 
 <?php get_footer(); ?>

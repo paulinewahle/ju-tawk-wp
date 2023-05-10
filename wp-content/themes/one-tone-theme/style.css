@@ -5,4 +5,7 @@ Description: A custom Wordpress Theme.
 Version: 1.0
 License: MIT License
 Text Domain: one-tone
-*//*# sourceMappingURL=style.css.map */
+*/
+*, body {
+  background-color: blue;
+}/*# sourceMappingURL=style.css.map */

@@ -21,12 +21,12 @@ add_action('after_setup_theme', 'one_tone_theme_setup');
 function one_tone_theme_scripts()
 {
     
-    //$theme_version = wp_get_theme()->get("Version")
+    $theme_version = wp_get_theme()->get("Version");
     //Enqueue styles
-    wp_enqueue_style('one-tone-theme-style', get_stylesheet_uri());
+    wp_enqueue_style('one-tone-theme-style', get_stylesheet_uri(), [], $theme_version);
 
     //Enqueue scripts
-    wp_enqueue_script('one-tone-theme-script', get_template_directory_uri() . '/js/main.js', [], '1.0', true);
+    wp_enqueue_script('one-tone-theme-script', get_template_directory_uri() . '/js/main.js', [], $theme_version, true);
 }
 
 add_action('wp_enqueue_scripts', 'one_tone_theme_scripts');
