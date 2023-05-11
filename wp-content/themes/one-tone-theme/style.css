@@ -10,7 +10,6 @@ html {
   width: 80vw;
   margin: 10vw;
   padding: 0;
-  border: 1px solid;
 }
 
 #custom-cursor {
@@ -24,41 +23,55 @@ html {
   left: -15px;
   top: -30px;
   border-radius: 50%;
-  background-color: #535cc6;
+  background-color: #272727;
   mix-blend-mode: exclusion;
+}
+
+h1, p, a {
+  mix-blend-mode: color-burn;
 }
 
 h1 {
   font-family: "norman-variable", sans-serif;
   font-size: 10em;
-  color: #535cc6;
+  font-weight: 200;
+  color: #272727;
 }
 
 p {
   font-family: "adobe-caslon-pro", serif;
-  width: 50%;
+  color: #272727;
 }
 
 a {
-  -webkit-text-stroke: 1px #535cc6;
+  -webkit-text-stroke: 1px #272727;
   color: rgba(0, 0, 0, 0);
   text-decoration: none;
 }
 
+a:hover {
+  color: #272727;
+}
+
+.wp-block-button__link {
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 2em;
+}
+
 body {
-  background-color: #b7b8c2;
+  background-color: #EBECDC;
   box-sizing: border-box;
 }
 
 header {
   height: 10vh;
-  width: 80vw;
+  width: 79vw;
   top: 5vh;
-  border: 1px solid;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
 }
@@ -68,33 +81,51 @@ header a {
 header nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 header nav a {
   font-size: 1em;
   text-decoration: none;
-  margin: 0 2em;
-  color: #535cc6;
+  margin: 0;
+  color: #272727;
   -webkit-text-stroke: 0px;
 }
 
-cite {
+blockquote p {
   font-family: "norman-variable", sans-serif;
-  font-size: 2em;
-  color: #535cc6;
+  font-size: 8em;
+  width: 100%;
+  color: #272727;
 }
 
 img {
   mix-blend-mode: darken;
-  width: 100%;
-  position: fixed;
+  width: 20vw;
+  display: inline-block;
 }
 
 .attachment-post-thumbnail {
-  height: 50vh;
-  width: auto;
+  height: auto;
+  width: 20vw;
   position: fixed;
-  top: 25vh;
-  left: 60vw;
-  z-index: -1;
+  top: 20vh;
+  left: 40vw;
+}
+
+footer {
+  width: 100%;
+  height: 10vh;
+  border: 1px solid;
+}
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+footer nav a {
+  font-size: 1em;
+  text-decoration: none;
+  margin: 0;
+  color: #272727;
+  -webkit-text-stroke: 0px;
 }/*# sourceMappingURL=style.css.map */

@@ -7,6 +7,7 @@
         ));
         ?>
     </nav>
+    <?php the:title(); ?>
     <?php dynamic_sidebar('footer-widget-area'); ?>
 </footer>
 <?php wp_footer(); ?>

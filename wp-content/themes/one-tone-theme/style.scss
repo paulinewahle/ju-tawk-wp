@@ -10,13 +10,31 @@ License: MIT License
 @import url("https://use.typekit.net/bws6tsp.css");
 $title-font: "norman-variable", sans-serif;
 $body-font: "adobe-caslon-pro", serif;
-$accent-color: #535cc6;
-$bg-color: #b7b8c2;
+$accent-color: #272727;
+$bg-color: #EBECDC;
+$effect: color-burn;
+
+@mixin flexNav{
+    nav{
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        a{
+            font-size: 1em;
+            text-decoration: none;
+            margin: 0;
+            color: $accent-color;
+            -webkit-text-stroke: 0px;
+        }
+    }
+}
 html{
     width: 80vw;
     margin: 10vw;
     padding: 0;
-    border: 1px solid;
+    //border: 1px solid;
 }
 #custom-cursor{
     height: 30px;
@@ -32,19 +50,30 @@ html{
     background-color: $accent-color;
     mix-blend-mode: exclusion;
 }
+h1, p, a{
+    mix-blend-mode: $effect;
+}
 h1{
     font-family: $title-font;
     font-size: 10em;
+    font-weight: 200;
     color: $accent-color;
 }
 p{
     font-family: $body-font;
-    width: 50%;
+    color: $accent-color;
 }
 a{
     -webkit-text-stroke: 1px $accent-color;
     color: rgba(0,0,0,0);
     text-decoration: none;
+}
+a:hover{
+    color: $accent-color;
+}
+.wp-block-button__link{
+    background-color: rgba(0,0,0,0);
+    font-size: 2em;
 }
 body{
     background-color: $bg-color;
@@ -53,55 +82,52 @@ body{
 
 header{
     height: 10vh;
-    width: 80vw;
+    width: 79vw;
     top: 5vh;
-    border: 1px solid;
+    //border: 1px solid;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     a{
         font-size: 2em;
     }
-    nav{
-        //width: 40%;
-        ul{
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-        }
-        a{
-            font-size: 1em;
-            text-decoration: none;
-            margin: 0 2em;
-            color: $accent-color;
-            -webkit-text-stroke: 0px;
-        }
-    }
+    @include flexNav();
 }
 // .wp-block-gallery{
 
 // }
-cite{
-    font-family: $title-font;
-    font-size: 2em;
-    color: $accent-color;
+blockquote{
+    p{
+        font-family: $title-font;
+        font-size: 8em;
+        width: 100%;
+        color: $accent-color;
+    }
 }
 img{
     //filter: grayscale(100%);
     mix-blend-mode: darken;
-    width: 100%;
-    position: fixed;
+    width: 20vw;
+    display: inline-block;
+    //top: 10vh;
 }
 .attachment-post-thumbnail{
-    height: 50vh;
-    width: auto;
+    height: auto;
+    width: 20vw;
     position: fixed;
-    top: 25vh;
-    left: 60vw;
-    z-index: -1;
+    top: 20vh;
+    left: 40vw;
+    //z-index: -1;
+}
+footer{
+    width: 100%;
+    height: 10vh;
+    border: 1px solid;
+    @include flexNav();
 }
 // img::before {
 //     background-color:    $accent-color;
@@ -117,4 +143,3 @@ img{
 //     z-index:             1;
     
 //   }
-

@@ -15,16 +15,17 @@
         <nav>
             <?php
             wp_nav_menu(array(
-                //'theme_location' => 'primary',
+                'theme_location' => 'primary',
                 'menu_class' => 'primary-menu',
             ));
             ?> 
         </nav>
+        <!-- <?php //wp_title(); ?> replace with dynamic -->
         <a href="/ju-tawk-wp/#"> One Tone </a>
         <nav>
             <?php
             wp_nav_menu(array(
-                //'theme_location' => 'secondary',
+                'theme_location' => 'secondary',
                 'menu_class' => 'secondary-menu',
             ));
             ?> 
