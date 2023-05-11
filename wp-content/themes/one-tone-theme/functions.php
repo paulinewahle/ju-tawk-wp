@@ -18,6 +18,21 @@ function one_tone_theme_setup()
 
 add_action('after_setup_theme', 'one_tone_theme_setup');
 
+//custom post type "products"
+function wporg_custom_post_type() {
+	register_post_type('wporg_product',
+		array(
+			'labels'      => array(
+				'name'          => __('Products', 'textdomain'),
+				'singular_name' => __('Product', 'textdomain'),
+			),
+				'public'      => true,
+				'has_archive' => true,
+		)
+	);
+}
+add_action('init', 'wporg_custom_post_type');
+
 function one_tone_theme_scripts()
 {
     
