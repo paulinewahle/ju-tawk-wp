@@ -16,7 +16,7 @@ html{
     width: 80vw;
     margin: 10vw;
     padding: 0;
-    border: 2px solid;
+    border: 1px solid;
 }
 #custom-cursor{
     height: 30px;
@@ -30,7 +30,7 @@ html{
     top: -30px;
     border-radius: 50%;
     background-color: $accent-color;
-    mix-blend-mode: color-burn;
+    mix-blend-mode: exclusion;
 }
 h1{
     font-family: $title-font;
@@ -81,31 +81,40 @@ header{
         }
     }
 }
-.wp-block-gallery{
+// .wp-block-gallery{
 
-}
+// }
 cite{
     font-family: $title-font;
     font-size: 2em;
     color: $accent-color;
 }
 img{
-
-    filter: grayscale(100%);
-    mix-blend-mode: multiply;
+    //filter: grayscale(100%);
+    mix-blend-mode: darken;
+    width: 100%;
+    position: fixed;
 }
-img::before {
-    background-color:    $accent-color;
-    bottom:              0;
-    content:             "";
-    height:              100%;
-    left:                0;
-    mix-blend-mode:      lighten;
-    position:            absolute;
-    right:               0;
-    top:                 0;
-    width:               100%;
-    z-index:             1;
+.attachment-post-thumbnail{
+    height: 50vh;
+    width: auto;
+    position: fixed;
+    top: 25vh;
+    left: 60vw;
+    z-index: -1;
+}
+// img::before {
+//     background-color:    $accent-color;
+//     bottom:              0;
+//     content:             "";
+//     height:              100%;
+//     left:                0;
+//     mix-blend-mode:      lighten;
+//     position:            absolute;
+//     right:               0;
+//     top:                 0;
+//     width:               100%;
+//     z-index:             1;
     
-  }
+//   }
 
