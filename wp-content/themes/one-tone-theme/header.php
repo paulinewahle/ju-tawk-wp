@@ -9,6 +9,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="custom-cursor"> </div>
     <header>
         
         <nav>
@@ -19,7 +20,7 @@
             ));
             ?> 
         </nav>
-        <h1> One Tone </h1>
+        <a href="/ju-tawk-wp/#"> One Tone </a>
         <nav>
             <?php
             wp_nav_menu(array(
