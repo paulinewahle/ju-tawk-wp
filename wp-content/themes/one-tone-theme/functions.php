@@ -91,3 +91,9 @@ function one_tone_theme_footer_function()
     echo '<span class="meta-edit"' . get_edit_post_link(__('Edit', 'one-tone-theme')) . '</span>';
     echo '</div>';
 }
+
+//Customize color options
+// $wp_customize->add_setting( 'accent_color', array(
+//     'default' => '#f72525',
+//     'sanitize_callback' => 'sanitize_hex_color',
+//   ) );
