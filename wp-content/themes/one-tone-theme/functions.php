@@ -21,7 +21,7 @@ add_action('after_setup_theme', 'one_tone_theme_setup');
 
 //custom post type "products"
 function wporg_custom_post_type() {
-	register_post_type('wporg_catalogue',
+	register_post_type('wporg_product',
 		array(
 			'labels'      => array(
 				'name'          => __('Products', 'textdomain'),

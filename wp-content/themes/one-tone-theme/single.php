@@ -9,6 +9,10 @@
                 <p class="post-meta"><?php printf(__('Posted on %s', 'one-tone-theme'), get_the_date(), get_the_author()); ?></p>
                 <?php the_content(); ?>
             </article>
+            <?php wp_link_pages(array(
+            'before' => '<div class"page-links">' . esc_html__('Pages:', 'one-tone-theme'),
+            'after' => '</div>',
+            )); ?>
         <?php endwhile; ?>
     <?php else : ?>
         <p><?php esc:html_e('Sorry, no posts matched your criteria.', 'one-tone-theme'); ?></p>

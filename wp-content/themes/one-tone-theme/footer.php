@@ -1,6 +1,6 @@
 <footer>
-    <h2> One Tone </h2>
-    <!-- <?php get_the_title(); ?> -->
+    
+     <a href="/ju-tawk-wp/#"> <h1>  <?= get_bloginfo('name'); ?> </h1> </a>
     <nav>
         <?php
         wp_nav_menu(array(
@@ -9,6 +9,7 @@
         ));
         ?>
     </nav>
+    
     <?php dynamic_sidebar('footer-widget-area'); ?>
 </footer>
 <?php wp_footer(); ?>

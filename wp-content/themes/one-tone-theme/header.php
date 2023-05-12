@@ -20,8 +20,7 @@
             ));
             ?> 
         </nav>
-        <?php wp_title(''); ?> 
-        <a href="/ju-tawk-wp/#"> One Tone </a>
+        <a href="/ju-tawk-wp/#"> <h1>  <?= get_bloginfo('name'); ?> </h1> </a>
         <nav>
             <?php
             wp_nav_menu(array(
