@@ -27,15 +27,15 @@ html {
   mix-blend-mode: exclusion;
 }
 
-h1, p, a {
+h1, h2, h3, h4, h5, p, a {
   mix-blend-mode: color-burn;
+  color: #272727;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: "norman-variable", sans-serif;
   font-size: 10em;
   font-weight: 200;
-  color: #272727;
 }
 
 p {
@@ -64,6 +64,7 @@ body {
 }
 
 header {
+  z-index: 10000;
   height: 10vh;
   width: 79vw;
   top: 5vh;
@@ -78,17 +79,20 @@ header {
 header a {
   font-size: 2em;
 }
+header nav {
+  width: 30%;
+}
 header nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 0;
 }
 header nav a {
   font-size: 1em;
   text-decoration: none;
-  margin: 0;
   color: #272727;
-  -webkit-text-stroke: 0px;
+  -webkit-text-stroke: 0;
 }
 
 blockquote p {
@@ -96,10 +100,11 @@ blockquote p {
   font-size: 8em;
   width: 100%;
   color: #272727;
+  text-align: center;
 }
 
 img {
-  mix-blend-mode: darken;
+  mix-blend-mode: normal;
   width: 20vw;
   display: inline-block;
 }
@@ -110,6 +115,7 @@ img {
   position: fixed;
   top: 20vh;
   left: 40vw;
+  z-index: -1;
 }
 
 footer {
@@ -117,15 +123,18 @@ footer {
   height: 10vh;
   border: 1px solid;
 }
+footer nav {
+  width: 30%;
+}
 footer nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 0;
 }
 footer nav a {
   font-size: 1em;
   text-decoration: none;
-  margin: 0;
   color: #272727;
-  -webkit-text-stroke: 0px;
+  -webkit-text-stroke: 0;
 }/*# sourceMappingURL=style.css.map */

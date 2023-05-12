@@ -16,17 +16,18 @@ $effect: color-burn;
 
 @mixin flexNav{
     nav{
+        width: 30%;
         ul{
             list-style: none;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
+            padding: 0;
         }
         a{
             font-size: 1em;
             text-decoration: none;
-            margin: 0;
             color: $accent-color;
-            -webkit-text-stroke: 0px;
+            -webkit-text-stroke: 0;
         }
     }
 }
@@ -34,7 +35,6 @@ html{
     width: 80vw;
     margin: 10vw;
     padding: 0;
-    //border: 1px solid;
 }
 #custom-cursor{
     height: 30px;
@@ -50,14 +50,14 @@ html{
     background-color: $accent-color;
     mix-blend-mode: exclusion;
 }
-h1, p, a{
+h1, h2, h3, h4, h5, p, a{
     mix-blend-mode: $effect;
+    color: $accent-color;
 }
-h1{
+h1, h2, h3{
     font-family: $title-font;
     font-size: 10em;
     font-weight: 200;
-    color: $accent-color;
 }
 p{
     font-family: $body-font;
@@ -81,10 +81,10 @@ body{
 }
 
 header{
+    z-index: 10000;
     height: 10vh;
     width: 79vw;
     top: 5vh;
-    //border: 1px solid;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -106,14 +106,16 @@ blockquote{
         font-size: 8em;
         width: 100%;
         color: $accent-color;
+        text-align: center;
     }
 }
 img{
     //filter: grayscale(100%);
-    mix-blend-mode: darken;
+    mix-blend-mode: normal;
     width: 20vw;
     display: inline-block;
     //top: 10vh;
+    
 }
 .attachment-post-thumbnail{
     height: auto;
@@ -121,7 +123,8 @@ img{
     position: fixed;
     top: 20vh;
     left: 40vw;
-    //z-index: -1;
+    z-index: -1;
+    //transition: left top 3s ease;
 }
 footer{
     width: 100%;

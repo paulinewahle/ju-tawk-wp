@@ -56,6 +56,15 @@ function one_tone_theme_widgets_init(){
         'before-title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
+    register_sidebar(array(
+        'name' => __('Footer Widget Area', 'one-tone-theme'),
+        'id' => 'primary-sidebar',
+        'description' => __('Add widgets here to appear in the primary sidebar.', 'one-tone-theme'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before-title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
 }
 
 add_action('widget_init', 'one_tone_theme_widgets_init');
