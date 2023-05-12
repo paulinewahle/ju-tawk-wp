@@ -9,7 +9,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="custom-cursor"> </div>
+<div id="custom-cursor"> &#10036; </div>
     <header>
         
         <nav>
@@ -20,7 +20,7 @@
             ));
             ?> 
         </nav>
-        <!-- <?php //wp_title(); ?> replace with dynamic -->
+        <?php //wp_title(''); ?> 
         <a href="/ju-tawk-wp/#"> One Tone </a>
         <nav>
             <?php

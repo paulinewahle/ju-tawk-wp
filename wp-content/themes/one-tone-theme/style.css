@@ -7,24 +7,31 @@ License: MIT License
 */
 @import url("https://use.typekit.net/bws6tsp.css");
 html {
+  cursor: none;
   width: 80vw;
   margin: 10vw;
   padding: 0;
+  background-color: #EBECDC;
+}
+
+body {
+  box-sizing: border-box;
 }
 
 #custom-cursor {
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  padding: 0;
   position: fixed;
   z-index: 99;
   pointer-events: none;
   display: grid;
   place-items: center;
-  left: -15px;
-  top: -30px;
-  border-radius: 50%;
-  background-color: #272727;
-  mix-blend-mode: exclusion;
+  margin-left: -25px;
+  margin-top: -25px;
+  mix-blend-mode: color-burn;
+  color: #272727;
 }
 
 h1, h2, h3, h4, h5, p, a {
@@ -50,16 +57,7 @@ a {
 
 a:hover {
   color: #272727;
-}
-
-.wp-block-button__link {
-  background-color: rgba(0, 0, 0, 0);
-  font-size: 2em;
-}
-
-body {
-  background-color: #EBECDC;
-  box-sizing: border-box;
+  cursor: none;
 }
 
 header {
@@ -74,6 +72,7 @@ header {
   justify-content: space-around;
   align-items: center;
   position: fixed;
+  color: #272727;
 }
 header a {
   font-size: 2em;
@@ -109,6 +108,11 @@ img {
   display: inline-block;
 }
 
+.wp-block-button__link {
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 2em;
+}
+
 .attachment-post-thumbnail {
   height: auto;
   width: 20vw;
@@ -118,19 +122,51 @@ img {
   z-index: -1;
 }
 
+#page-id-22.img {
+  position: relative;
+}
+
 .wp-block-post-title {
   font-size: 2em;
 }
 
-.wp-post-image {
-  position: relative;
-  width: 10vw;
+.wp-block-latest-posts__list {
+  font-size: 2em;
+}
+
+.wp-block-search__inside-wrapper {
+  width: 50%;
+  height: 2em;
+}
+.wp-block-search__inside-wrapper .wp-block-search__input {
+  color: #272727;
+  mix-blend-mode: color-burn;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid;
+}
+.wp-block-search__inside-wrapper input::-moz-placeholder {
+  opacity: 0;
+  font-family: "norman-variable", sans-serif;
+}
+.wp-block-search__inside-wrapper input::placeholder {
+  opacity: 0;
+  font-family: "norman-variable", sans-serif;
+}
+.wp-block-search__inside-wrapper button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-family: "norman-variable", sans-serif;
+  color: #272727;
+  mix-blend-mode: color-burn;
+  font-size: 1.5em;
 }
 
 footer {
   width: 100%;
   height: 10vh;
   border: 1px solid;
+  display: flex;
 }
 footer nav {
   width: 30%;
@@ -146,4 +182,11 @@ footer nav a {
   text-decoration: none;
   color: #272727;
   -webkit-text-stroke: 0;
+}
+footer h2 {
+  font-size: 2em;
+}
+footer nav {
+  border: 1px solid;
+  width: 70%;
 }/*# sourceMappingURL=style.css.map */

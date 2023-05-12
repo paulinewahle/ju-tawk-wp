@@ -4,7 +4,7 @@
     <?php if(have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
             <article>
-                <h1><?php the:title(); ?></h1>
+                <h1><?php the_title(); ?></h1>
                 <?php the_post_thumbnail(); ?>
                 <p class="post-meta"><?php printf(__('Posted on %s', 'one-tone-theme'), get_the_date(), get_the_author()); ?></p>
                 <?php the_content(); ?>

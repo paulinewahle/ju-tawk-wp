@@ -32,23 +32,30 @@ $effect: color-burn;
     }
 }
 html{
+    cursor: none;
     width: 80vw;
     margin: 10vw;
     padding: 0;
+    background-color: $bg-color;
+}
+body{
+    
+    box-sizing: border-box;
 }
 #custom-cursor{
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+    padding: 0;
     position: fixed;
     z-index: 99;
     pointer-events: none;
     display: grid;
     place-items: center;
-    left: -15px;
-    top: -30px;
-    border-radius: 50%;
-    background-color: $accent-color;
-    mix-blend-mode: exclusion;
+    margin-left: -25px;
+    margin-top: -25px;
+    mix-blend-mode: $effect;
+    color: $accent-color;
 }
 h1, h2, h3, h4, h5, p, a{
     mix-blend-mode: $effect;
@@ -69,16 +76,8 @@ a{
 }
 a:hover{
     color: $accent-color;
+    cursor: none;
 }
-.wp-block-button__link{
-    background-color: rgba(0,0,0,0);
-    font-size: 2em;
-}
-body{
-    background-color: $bg-color;
-    box-sizing: border-box;
-}
-
 header{
     z-index: 10000;
     height: 10vh;
@@ -91,8 +90,10 @@ header{
     justify-content: space-around;
     align-items: center;
     position: fixed;
+    color: $accent-color;
     a{
         font-size: 2em;
+        
         mix-blend-mode: $effect;
     }
     @include flexNav();
@@ -114,6 +115,10 @@ img{
     //top: 10vh;
     
 }
+.wp-block-button__link{
+    background-color: rgba(0,0,0,0);
+    font-size: 2em;
+}
 .attachment-post-thumbnail{
     height: auto;
     width: 20vw;
@@ -121,32 +126,51 @@ img{
     top: 20vh;
     left: 40vw;
     z-index: -1;
-    //transition: left top 3s ease;
+}
+#page-id-22.img{
+    position: relative;
 }
 .wp-block-post-title{
     font-size: 2em;
 }
-.wp-post-image{
-    position: relative;
-    width: 10vw;
+.wp-block-latest-posts__list{
+    font-size: 2em;
 }
+.wp-block-search__inside-wrapper{
+    width: 50%;
+    height: 2em;
+    .wp-block-search__input{
+        color: $accent-color;
+        mix-blend-mode: $effect;
+        background-color: rgba(0,0,0,0);
+        border: none;
+        border-bottom: 1px solid;
+    }
+    input::placeholder{
+        opacity: 0;
+        font-family: $title-font;
+    }
+    button{
+        background-color: rgba(0,0,0,0);
+        border: none;
+        font-family: $title-font;
+        color: $accent-color;
+        mix-blend-mode: $effect;
+        font-size: 1.5em;
+    }
+}
+
 footer{
     width: 100%;
     height: 10vh;
     border: 1px solid;
+    display: flex;
     @include flexNav();
+    h2{
+        font-size: 2em;
+    }
+    nav{
+        border: 1px solid;
+        width: 70%;
+    }
 }
-// img::before {
-//     background-color:    $accent-color;
-//     bottom:              0;
-//     content:             "";
-//     height:              100%;
-//     left:                0;
-//     mix-blend-mode:      lighten;
-//     position:            absolute;
-//     right:               0;
-//     top:                 0;
-//     width:               100%;
-//     z-index:             1;
-    
-//   }

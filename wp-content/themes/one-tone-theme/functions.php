@@ -10,6 +10,7 @@ function one_tone_theme_setup()
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'one-tone-theme'),
         'secondary' => __('Secondary Menu', 'one-tone-theme'),
+        'tertiary' => __('Tertiary Menu', 'one-tone-theme'),
     ));
 
     //Add custom image sizes
