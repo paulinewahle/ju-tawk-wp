@@ -40,7 +40,6 @@ h1, h2, h3 {
 
 p {
   font-family: "adobe-caslon-pro", serif;
-  color: #272727;
 }
 
 a {
@@ -78,6 +77,7 @@ header {
 }
 header a {
   font-size: 2em;
+  mix-blend-mode: color-burn;
 }
 header nav {
   width: 30%;
@@ -116,6 +116,15 @@ img {
   top: 20vh;
   left: 40vw;
   z-index: -1;
+}
+
+.wp-block-post-title {
+  font-size: 2em;
+}
+
+.wp-post-image {
+  position: relative;
+  width: 10vw;
 }
 
 footer {

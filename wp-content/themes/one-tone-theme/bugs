@@ -1,7 +1,9 @@
 replace dynamic site_tite in header.php and footer
 color choices for users on dashboard
 custom cursor
-secondary menu
+- secondary menu
 Catalogue page
-widget
+- widget
 search
+Add WordPress template tags and functions to the index.php and functions.php files.
+content post template

@@ -61,7 +61,6 @@ h1, h2, h3{
 }
 p{
     font-family: $body-font;
-    color: $accent-color;
 }
 a{
     -webkit-text-stroke: 1px $accent-color;
@@ -94,12 +93,10 @@ header{
     position: fixed;
     a{
         font-size: 2em;
+        mix-blend-mode: $effect;
     }
     @include flexNav();
 }
-// .wp-block-gallery{
-
-// }
 blockquote{
     p{
         font-family: $title-font;
@@ -125,6 +122,13 @@ img{
     left: 40vw;
     z-index: -1;
     //transition: left top 3s ease;
+}
+.wp-block-post-title{
+    font-size: 2em;
+}
+.wp-post-image{
+    position: relative;
+    width: 10vw;
 }
 footer{
     width: 100%;
