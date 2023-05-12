@@ -11,6 +11,7 @@ License: MIT License
 $title-font: "norman-variable", sans-serif;
 $body-font: "adobe-caslon-pro", serif;
 $accent-color: #272727;
+//#EBECDC, #dce7ec, #ecdcdc
 $bg-color: #EBECDC;
 $effect: color-burn;
 
@@ -134,7 +135,7 @@ img{
     height: auto;
     width: 20vw;
     position: fixed;
-    top: 20vh;
+    top: 25vh;
     left: 40vw;
     z-index: -1;
 }
@@ -177,7 +178,6 @@ img{
         mix-blend-mode:  $effect;
     }
     h2{
-
     font-weight: 200;
     }
 }
