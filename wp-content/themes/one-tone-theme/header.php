@@ -20,7 +20,7 @@
             ));
             ?> 
         </nav>
-        <?php //wp_title(''); ?> 
+        <?php wp_title(''); ?> 
         <a href="/ju-tawk-wp/#"> One Tone </a>
         <nav>
             <?php

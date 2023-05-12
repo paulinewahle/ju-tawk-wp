@@ -162,6 +162,17 @@ img {
   font-size: 1.5em;
 }
 
+.single-post h1 {
+  margin: 20% 0;
+}
+.single-post .post-meta {
+  margin: 5%;
+}
+.single-post p {
+  width: 50%;
+  text-align: justify;
+}
+
 footer {
   width: 100%;
   height: 10vh;
